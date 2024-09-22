@@ -1,0 +1,78 @@
+[
+  {
+    "title": "Coastle",
+    "description": "A wordle-style rollercoaster guessing game played by relating ride statistics to one another.",
+    "image": "coastle",
+    "details": [
+      { "type": "text", "content": "Coastle is a game where you have six guesses to figure out an unknown rollercoaster using your knowledge of ride statistics like manufacturer and top speed. Players can search for rollercoasters using a publicly available API, then see how the statistics of their guess compares to the answer (such as their guess having a lower top height or more inversions)." },
+      { "type": "image", "content": "coastlegameplay" },
+      { "type": "text", "content": "There's other cool features like a hint mechanic which helps you narrow down choices as you run out of guesses, daily/endless modes (shared answer between all users vs. randomly generated answers), and setting toggles like imperial/metric measurement and a harder endless answer pool. Guesses from both gamemodes are stored in local storage, allowing users to view their gameplay statistics using Chart.js." },
+      { "type": "image", "content": "coastlestats" },
+      { "type": "text", "content": "It was one of my first personal projects where I first came up with an idea, then researched and learned everything I needed to bring it to life. It gained heavy traction almost immediately after deployment, breaking 1000 daily users on its second day up while being featured by famous theme park community members. The huge response provided endless streams of feedback and suggestions for me to work with, and I got the extremely valuable experience of listening to a community through multiple different platforms and using that feedback to research and make new changes over the course of many months." },
+      { "type": "text", "content": "You can play the game yourself at <a href='https://pkyu.github.io/coastle' target='_blank' rel='noopener noreferrer'>this link</a>, but you'll probably feel extremely lost if you aren't familiar with rollercoaster stats. I've linked a video below of a well-known YouTuber playing it if you're interested in getting a feel for the gameplay loop." },
+      { "type": "video", "content": "https://www.youtube.com/embed/FSrddX1DmoI?si=ObhKIXE0bylDdRxI&amp;start=120" }
+    ],
+    "tech": ["Javascript", "HTML/CSS"]
+  },
+  {
+    "title": "PantryPal",
+    "description": "An attachable inventory management prototype using an ESP32, a barcode scanner, and an ultrasonic sensor connected to a web app.",
+    "image": "pantrypal",
+    "details": [
+      { "type": "text", "content": "PantryPal was a four person group project where the idea was to prototype an affordable and easy to install inventory management system, as opposed to expensive pre-installed ones like in smart fridges. It's a compact system that contains the following:" },
+      { "type": "text", "content": "-A switch to toggle between adding/removing item to inventory modes" },
+      { "type": "text", "content": "-A LED barcode scanner enabling users to easily scan items in" },
+      { "type": "text", "content": "-A LED screen that notifies user if an item was successfully added to the inventory or not" },
+      { "type": "text", "content": "-An ultrasonic sensor used to keep track of the door to the storage being open or not" },
+      { "type": "image", "content": "pantrypaldevice" },
+      { "type": "text", "content": "The components' functionality comes from ESP32 microcontrollers which communicate info such as new product barcodes and door status to the internet via HTTP over WiFi. The data is sent to directly to the REST API endpoint on PantryPal's Supabase database, where it's entered/removed as a table entry into the user's inventory." },
+      { "type": "text", "content": "Whenever the user logs into the PantryPal web app, it checks whether there have been changes made to their inventory table on Supabase. If there's new entries, it retrieves the product info from a publicly available barcode API and updates Supabase with the new info before displaying the inventory with product names, quantities, and ingredient info if it exists." },
+      { "type": "image", "content": "pantrypalpage" },
+      { "type": "text", "content": "It's a cool prototype that I believe has a lot of valid use cases since the web app is a publicly open site that can be easily accessed and logged into anywhere, such as on your phone at the grocery store. The physical components can also be separated and attached in different areas, making the system pretty flexible for different needs." }
+    ],
+    "tech": ["Arduino", "C/C++", "TypeScript", "Next.js", "REST"]
+  },
+  {
+    "title": "Tracking Eye Animatronic",
+    "description": "A 3D printed eyeball animatronic that follows nearby people using OpenCV image recognition.",
+    "image": "eyemech",
+    "details": [
+      { "type": "text", "content": "I had an idea about how cool/creepy it would be if you had a bunch of eyeballs embedded in a wall that followed you around on their own at a haunted house or something similar, so I decided to code out a simple prototype first as a learning experience. The eyeball and base are from schematics I found online, with slight adjustments made due to the servos I had on hand not matching the base dimensions. "},
+      { "type": "text", "content": "I first controlled the servos manually so that I could record their minimum/maximum degree positions in a way that the pupil would stay within realistic bounds. Next, I wrote a simple Python program using OpenCV that would detect/track faces using the default frontal face Haar Cascade, calculate the X and Y coordinates of the center of the rectangle drawn around the first detected face, then relay those coordinates to my Arduino One via the serial port." },
+      { "type": "text", "content": "On my Arduino's end, I wrote code that would parse the X and Y coordinates from the incoming serial, then map them to the turn angles of the servos. After uploading the code, the result was an eyeball that creepily followed me around." },
+      { "type": "video", "content": "https://www.youtube.com/embed/zGtnP0EcY8o" },
+      { "type": "text", "content": "I think this project is more of an early version of a finished product I've envisioned. I'd next like to 3D model the base myself and also test tracking my own eyeball position/blinking and mapping it to the animatronic so that it looks where I look." }
+    ],
+    "tech": ["Arduino", "Python", "OpenCV"]
+  },
+  {
+    "title": "MeeTBD",
+    "description": "A web app combining When2Meet UI with Google Auth and Calendar APIs to act as an event planner for established groups.",
+    "image": "meetbd",
+    "details": [
+      { "type": "text", "content": "MeeTBD was a group project born from the pretty simple idea of wanting to make a more beefed up version of When2Meet. As opposed to generating new links and open-ended When2Meet's for each event, we wanted to make a site that supports persistent groups holding multiple events." },
+      { "type": "text", "content": "The first step for this was Google Auth and Calendar integration. Users would log into MeeTBD using their Google account. They could then create their own groups, or join other groups using generated codes. Once in a group, they would have access to its events and be able to provide their availability for ones that had yet to be scheduled. All information for groups, events, and users was stored in a Supabase database." },
+      { "type": "image", "content": "meetbdgroup" },
+      { "type": "text", "content": "Users could fill out their availability from scratch using the click-and-drag grid mechanic from When2Meet, or automatically fill it out using their Google calendar then refine it from there. When ready, Group/Event admins could drag over potential time slots to see how many people would be available during that time, then schedule their event and send emails to participating members, prompting them to add it to their Google Calendars." },
+      { "type": "image", "content": "meetbdschedule" },
+      { "type": "text", "content": "On the home page, users would have a list of all the groups they're in, a list of upcoming events, and a list of events they hadn't provided their availability for yet. This way, users could easily understand everything being planned on our site that they were a part of." },
+      { "type": "text", "content": "My role in this project was handling Google Auth/Calendar integration, creating the group pages and their routing, setting up Supabase and its User Auth/RLS, creating events, and group availability logic." }
+    ],
+    "tech": ["React", "Javascript", "Google API"]
+  },
+  {
+    "title": "In The Shadows",
+    "description": "A 2D turn-based stealth game where you're tasked with crawling a multi-floor dungeon and eluding guards that can track you down.",
+    "image": "intheshadows",
+    "details": [
+      { "type": "text", "content": "In The Shadows was a group project where we made a 2D tile based game challenging players to make it to the end of each level without being caught by patrolling guards. It was written completely in Python using PyGame with original art for everything. There's different abilities and items you can use that are shared throughout the levels, making lots of variety when it comes to strategizing how to beat the game." },
+      { "type": "image", "content": "intheshadowscontrols" },
+      { "type": "text", "content": "My role in the group was creating the base entity classes + mechanics such as player and guard movement, guard vision + light/shadow mechanics and how they interact with one another, and guard tracking once the player gets spotted. I also designed some levels, wrote how they'd be loaded in, and did general bugfixes at the end. The levels are stored in text files that have a standard format of tile placements in the map grid, guard starting positions, and their patrol routes. The cool part about this is that since the format is so simple, anyone can write new text files and put them in the levels folder to contribute more content to the game." },
+      { "type": "image", "content": "intheshadowslevel" },
+      { "type": "text", "content": "If the player is caught in front of a guard short range, or if they're in a light tile any distance in front of a guard, the guards enter chase mode and begin to hunt down the player using the A* search algorithm. Players avoid this by memorizing patrol routes and extinguishing torches by hand or with thrown water bottles, creating new shadows to maneuver through before the guards return and re-light the torches. "},
+      { "type": "text", "content": "While the game is simple, its mechanics when paired with good level design make a challenging and fun experience that holds a definite strategy aspect. Through proper planning and execution, players can elude the guards and reach the bottom of the dungeon to steal the brilliant diamond waiting for them." },
+      { "type": "image", "content": "intheshadowsgameplay" }
+    ],
+    "tech": ["Python"]
+  }
+]
