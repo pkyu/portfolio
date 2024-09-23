@@ -96,12 +96,12 @@
   .chips-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center alignment for mobile */
+    justify-content: center;
     align-items: center;
     gap: 5px;
   
     @media (min-width: 769px) {
-      justify-content: flex-start; /* Left alignment for desktop */
+      justify-content: flex-start;
     }
   }
   
@@ -111,13 +111,13 @@
     font-size: 12px; 
     color: white;
     @media (min-width: 769px) {
-      font-size: 16px; /* Larger font size for desktop */
+      font-size: 16px;
     }
   }
   
 
   .experience-details {
-    margin-top: 2rem;
+    margin-top: 1rem;
     gap: 15px;
 
     h1 {

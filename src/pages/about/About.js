@@ -91,11 +91,4 @@ const About = () => {
     </div>
   );
 };
-
-/**
-            I'm a big fan of theme parks and travelling, usually trying to combine the two somehow<br />
-            I enjoy reading and writing fiction novels and poetry, then discussing it with others <br />
-            I love spending time with my friends, whether it be on video games or weekend trips<br />
-            and I love sharing and talking about whatever new interests I have at the time<br />
- */
 export default About;
