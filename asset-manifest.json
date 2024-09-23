@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.4e981bf6.css",
-    "main.js": "/static/js/main.ae501575.js",
+    "main.css": "/static/css/main.b2abd1a9.css",
+    "main.js": "/static/js/main.bfbd9a5a.js",
     "static/js/453.883ffb9b.chunk.js": "/static/js/453.883ffb9b.chunk.js",
     "static/media/sitewallpaper.png": "/static/media/sitewallpaper.59a3bd84e696383206b6.png",
-    "static/media/portfoliotitle.png": "/static/media/portfoliotitle.cadf8e1f79d120f19a3b.png",
     "static/media/tpt2.png": "/static/media/tpt2.55f0fc2130a329977faa.png",
     "static/media/travel.png": "/static/media/travel.e9458a44651155631f24.png",
     "static/media/themepark.png": "/static/media/themepark.6c9114f59d087935235a.png",
@@ -25,6 +24,7 @@
     "static/media/coastlestats.png": "/static/media/coastlestats.bf1b86a795d74e456f81.png",
     "static/media/coastle.png": "/static/media/coastle.bafadc99555972dfbb9b.png",
     "static/media/pantrypalpage.png": "/static/media/pantrypalpage.8c3aea74e950247bf750.png",
+    "static/media/Jason_Baron_resume.pdf": "/static/media/Jason_Baron_resume.b70dde7194024319c8b9.pdf",
     "static/media/coastlefirstweek.png": "/static/media/coastlefirstweek.1c84056df4c891c16b7e.png",
     "static/media/meetbdsupabase.png": "/static/media/meetbdsupabase.865d0779b8d5ed71d4e5.png",
     "static/media/primeicons.eot": "/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
@@ -37,12 +37,12 @@
     "static/media/pantrypaltables.png": "/static/media/pantrypaltables.fb38ba93a87b4e188ac3.png",
     "static/media/arrow-right.png": "/static/media/arrow-right.b967fa3420cd46c34193.png",
     "index.html": "/index.html",
-    "main.4e981bf6.css.map": "/static/css/main.4e981bf6.css.map",
-    "main.ae501575.js.map": "/static/js/main.ae501575.js.map",
+    "main.b2abd1a9.css.map": "/static/css/main.b2abd1a9.css.map",
+    "main.bfbd9a5a.js.map": "/static/js/main.bfbd9a5a.js.map",
     "453.883ffb9b.chunk.js.map": "/static/js/453.883ffb9b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e981bf6.css",
-    "static/js/main.ae501575.js"
+    "static/css/main.b2abd1a9.css",
+    "static/js/main.bfbd9a5a.js"
   ]
 }
