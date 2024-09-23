@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import home from '../../assets/sitewallpaper.png';
-import portfoliotitle from '../../assets/portfoliotitle.png';
 import arrowright from '../../assets/arrow-right.png';
+import Jason_Baron_resume from '../../assets/Jason_Baron_resume.pdf';
 import './Home.scss';
 
 const Home = () => {
@@ -13,7 +13,13 @@ const Home = () => {
         <div className='home-page-text-container'>
           <div className='home-left'>
             <h1>Jason's Portfolio</h1>
-            <h2>Sept. 2024</h2>
+            <h2>
+              <a href={Jason_Baron_resume} download="Jason_Baron_resume.pdf" className="resume-link">Resume</a>
+              <span> / </span>
+              <a href="https://www.linkedin.com/in/jason-xb" target="_blank" rel="noopener noreferrer" className="resume-link">LinkedIn</a>
+              <span> / </span>
+              <a href="mailto:jasonbaronx@gmail.com" className="resume-link">Email</a>
+            </h2>
           </div>
           <div className='home-right'>
             <h2>

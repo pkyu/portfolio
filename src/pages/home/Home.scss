@@ -25,6 +25,15 @@
                 h2 {
                     margin-top: -2.5rem;
                 }
+                .resume-link {
+                    color: #1f1b1b;
+                    text-decoration: none;
+                    font-size: 28px;
+                    transition: color 0.3s;
+                    &:hover {
+                        color: #6a80c2;
+                    }
+                }
             }
             .home-right {
                 text-align: right;
@@ -34,6 +43,10 @@
                     a {
                         text-decoration: none;
                         color: inherit;
+                        transition: color 0.3s;
+                        &:hover {
+                            color: #6a80c2;
+                        }
                     }
                     .arrow-icon {
                         width: 20px;
@@ -43,7 +56,6 @@
                         position: relative;
                         bottom: 2px;
                     }
-                            
                 }
             }
         }
