@@ -3,6 +3,7 @@ import './Experience.scss';
 import { Chip } from 'primereact/chip';
 import { Divider } from 'primereact/divider';
 import udxlogo from '../../assets/udxlogo.jpg';
+import l3logo from '../../assets/l3logo.jpg';
 import experience from '../../assets/experience.png';
 
 const Experience = () => {
@@ -58,6 +59,37 @@ const Experience = () => {
                 </li>
                 <li>
                   Diagnosed and performed bugfixes on currently implemented components and how they received/consumed data.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="experience-tile">
+          <img src={l3logo} alt="L3Harris logo" className="experience-image" />
+          <div className="experience-info">
+            <h2 className="experience-role">Associate Software Engineer</h2>
+            <h2 className="experience-company">L3Harris Technologies</h2>
+            <h3 className="experience-time">Jun 2024 - Current</h3>
+            <div className="chips-container">
+              <Chip label="Typescript" className="language-chip" />
+              <Chip label="Python" className="language-chip" />
+              <Chip label="Docker" className="language-chip" />
+              <Chip label="Redis" className="language-chip" />
+              <Chip label="RabbitMQ" className="language-chip" />
+              <Chip label="OpenAPI" className="language-chip" />
+            </div>
+            <div className="experience-details">
+              <Divider />
+              <h1>Full Stack/DevOps</h1>
+              <ul>
+                <li>
+                Build & maintain multiple team-specific versions of full-stack software for viewing/measuring time-series data, enable users to make custom dashboards using widget templates.
+                </li>
+                <li>
+                Develop & provide containerized software utilities for teams using Python servers, Rest APIs & web UIs. Main utilities include cache/persistent storage, async messaging facilitation, system logging & access management.
+                </li>
+                <li>
+                Continuously work with other teams to help implement/maintain full-stack app & utilities for their specific needs. Test containerized software on Linux virtual machines & with unit/functional tests, write heavy documentation.
                 </li>
               </ul>
             </div>

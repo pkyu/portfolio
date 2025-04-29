@@ -22,6 +22,10 @@ import pantrypalpage from '../../assets/pantrypalpage.png';
 import intheshadowscontrols from '../../assets/intheshadowcontrols.png';
 import intheshadowslevel from '../../assets/intheshadowslevel.png';
 import intheshadowsgameplay from '../../assets/intheshadowsgameplay.gif'
+import stewart from '../../assets/stewart.png';
+import stewartgif from '../../assets/stewartgif.gif';
+import stewartgif2 from '../../assets/stewartgif2.gif';
+import l3logo from '../../assets/l3logo.jpg';
 import './Projects.scss';
 
 const imageMap = {
@@ -42,6 +46,10 @@ const imageMap = {
   intheshadowscontrols: intheshadowscontrols,
   intheshadowslevel: intheshadowslevel,
   intheshadowsgameplay: intheshadowsgameplay,
+  stewart: stewart,
+  stewartgif: stewartgif,
+  stewartgif2: stewartgif2,
+  l3logo: l3logo,
 };
 
 const Projects = () => {

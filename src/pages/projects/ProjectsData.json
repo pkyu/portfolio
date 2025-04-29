@@ -46,6 +46,21 @@
     "tech": ["Arduino", "Python", "OpenCV"]
   },
   {
+    "title": "Servo-Based Stewart Platform Simulation",
+    "description": "A Unity simulation of a stewart platform built using rotational servos that can be controlled via keyboard.",
+    "image": "stewart",
+    "details": [
+      { "type": "text", "content": "Stewart platforms are devices used to control position and orientation in six degrees of freedom (movement along X, Y, and Z axes, as well as pitch, roll and yaw). They're commonly used for motion simulators for themed entertainment and aviation training, and also have other neat use cases like in precision manufacturing. They consist of six adjustable-length legs connecting a baseplate to a platform using universal joints." },
+      { "type": "text", "content": "Commonly the adjustable-length aspect of the legs is achieved using hydraulic jacks or linear actuators (devices making the legs go straight up and down). I wanted a more cost-effective solution however, which led me into researching how it could be achieved using rotational servos (which are super cheap, smaller ones come in packs of 6 for $15!). My end goal was to sync up an actual stewart platform to a digital twin in Unity, so I started with creating the Unity simulation first to help with planning." },
+      { "type": "image", "content": "stewart" },
+      { "type": "text", "content": "My implementation mainly uses math from the article linked at the bottom of the page, combining it with Unity's built-in capability of generating rotational matrices to effectively calculate the rotation needed for each servo to achieve a desired orientation. The script draws the legs, servos and platform in-game using passed in pre-fabs and user-specified dimensions for everything, allowing for high customizability which can help greatly with planning and understanding bounds. Additionally, I can also feed the angles straight from my C# script into my ESP32 to control my servos' rotation in real life." },
+      { "type": "image", "content": "stewartgif2" },
+      { "type": "text", "content": "<a href='https://raw.org/research/inverse-kinematics-of-a-stewart-platform/' target='_blank' rel='noopener noreferrer'>Robert Eisele's Explanation on Inverse Kinematics</a>"},
+      { "type": "text", "content": "<a href='https://en.wikipedia.org/wiki/Stewart_platform' target='_blank' rel='noopener noreferrer'>Stewart Platform Wikipedia</a>"}
+    ],
+    "tech": ["Unity", "C#"]
+  },
+  {
     "title": "MeeTBD",
     "description": "A web app combining When2Meet UI with Google Auth and Calendar APIs to act as an event planner for established groups.",
     "image": "meetbd",
