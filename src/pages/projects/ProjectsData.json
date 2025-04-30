@@ -12,7 +12,7 @@
       { "type": "text", "content": "You can play the game yourself at <a href='https://pkyu.github.io/coastle' target='_blank' rel='noopener noreferrer'>this link</a>, but you'll probably feel extremely lost if you aren't familiar with rollercoaster stats. I've linked a video below of a well-known YouTuber playing it if you're interested in getting a feel for the gameplay loop." },
       { "type": "video", "content": "https://www.youtube.com/embed/FSrddX1DmoI?si=ObhKIXE0bylDdRxI&amp;start=120" }
     ],
-    "tech": ["Javascript", "HTML/CSS"]
+    "tech": ["Javascript", "HTML/CSS", "AWS"]
   },
   {
     "title": "PantryPal",
@@ -33,7 +33,22 @@
     "tech": ["Arduino", "C/C++", "TypeScript", "Next.js", "REST"]
   },
   {
-    "title": "Tracking Eye Animatronic",
+    "title": "Beebo",
+    "description": "Desk light built using Node-RED and MQTT that lights up different colors when I receive messages on various platforms.",
+    "image": "beebo",
+    "details": [
+      { "type": "text", "content": "Beebo is a desk lamp that I can control using Node-RED to light up different colors for various events. I first bought a $8 desk lamp off of Amazon and gutted it." },
+      { "type": "image", "content": "beebo1" },
+      { "type": "text", "content": "I wanted to use WLED to control the lights since I had extra ESP32s already, so I bought a 7 x WS2812B LED ring that was compatible with the firmware and could fit inside my shell while still having an extremely high maximum brightness."},
+      { "type": "image", "content": "beebo2" },
+      { "type": "text", "content": "I wired it to an ESP32 microcontroller, installed WLED, then wrote Node-RED functions to send MQTT payloads to my ESP32 over WiFi. The WLED software on my ESP32 receives this information and uses it to alter brightness and color. Its main function at the moment is to automatically light up for five seconds when I receive new mail so I know to check my inbox. By default its purple, but I can check the message subject/contents for keywords to change this. For example, if an email contains the phrase \"LinkedIn\", I can instead have it light up blue or just ignore it entirely. Below is a gif of me triggering an event by sending an email to myself."},
+      { "type": "image", "content": "beebogif" },
+      { "type": "text", "content": "I also tried hooking it up to a Discord bot inside of my server and had it turn on whenever a new message was sent. This got old pretty quickly so that functionality's disabled now. The cool thing about Node-RED though is there's an ever-expanding library of user-made triggers and events I can use to control the light, ranging from Google calendar reminders to signals received from other microcontrollers. In the future if I make more smart devices to monitor my lights, washing machine and other stuff, I'm sure Beebo will be happy then to help me respond as quickly as possible too."}
+    ],
+    "tech": ["Node-RED", "MQTT", "WLED"]
+  },
+  {
+    "title": "Tracking Eyeball Animatronic",
     "description": "A 3D printed eyeball animatronic that follows nearby people using OpenCV image recognition.",
     "image": "eyemech",
     "details": [
@@ -53,27 +68,13 @@
       { "type": "text", "content": "Stewart platforms are devices used to control position and orientation in six degrees of freedom (movement along X, Y, and Z axes, as well as pitch, roll and yaw). They're commonly used for motion simulators for themed entertainment and aviation training, and also have other neat use cases like in precision manufacturing. They consist of six adjustable-length legs connecting a baseplate to a platform using universal joints." },
       { "type": "text", "content": "Commonly the adjustable-length aspect of the legs is achieved using hydraulic jacks or linear actuators (devices making the legs go straight up and down). I wanted a more cost-effective solution however, which led me into researching how it could be achieved using rotational servos (which are super cheap, smaller ones come in packs of 6 for $15!). My end goal was to sync up an actual stewart platform to a digital twin in Unity, so I started with creating the Unity simulation first to help with planning." },
       { "type": "image", "content": "stewart" },
-      { "type": "text", "content": "My implementation mainly uses math from the article linked at the bottom of the page, combining it with Unity's built-in capability of generating rotational matrices to effectively calculate the rotation needed for each servo to achieve a desired orientation. The script draws the legs, servos and platform in-game using passed in pre-fabs and user-specified dimensions for everything, allowing for high customizability which can help greatly with planning and understanding bounds. Additionally, I can also feed the angles straight from my C# script into my ESP32 to control my servos' rotation in real life." },
+      { "type": "text", "content": "My implementation mainly uses math from the article linked at the bottom of the page, combining it with Unity's built-in capability of generating rotational matrices to calculate the rotation needed for each servo to achieve a desired orientation. A basic summary of the math is that it takes existing knowledge on calculating leg lengths for stewart platforms with linear actuators, then builds onto it by drawing triangles with a servo horn and a fixed-length rod to calculate the necessary angle of rotation needed using geometric relationships." },
+      { "type": "text", "content": "My C# script draws the legs, servos and platform in-game using passed in pre-fabs and user-specified dimensions for everything, allowing for high customizability which can help greatly with planning and understanding bounds. Additionally, I can also feed the angles straight from my C# script into my ESP32 to control my servos' rotation in real life."},
       { "type": "image", "content": "stewartgif2" },
       { "type": "text", "content": "<a href='https://raw.org/research/inverse-kinematics-of-a-stewart-platform/' target='_blank' rel='noopener noreferrer'>Robert Eisele's Explanation on Inverse Kinematics</a>"},
       { "type": "text", "content": "<a href='https://en.wikipedia.org/wiki/Stewart_platform' target='_blank' rel='noopener noreferrer'>Stewart Platform Wikipedia</a>"}
     ],
     "tech": ["Unity", "C#"]
-  },
-  {
-    "title": "Beebo",
-    "description": "Desk light built using Node-RED and MQTT that lights up different colors when I receive messages on various platforms.",
-    "image": "beebo",
-    "details": [
-      { "type": "text", "content": "Beebo is a desk lamp that I can control using Node-RED to light up different colors for various events. I first bought a $8 desk lamp off of Amazon and gutted it." },
-      { "type": "image", "content": "beebo1" },
-      { "type": "text", "content": "I wanted to use WLED to control the lights since I had extra ESP32s already, so I bought a 7 x WS2812B LED ring that was compatible with the firmware and could fit inside my shell while still having an extremely high maximum brightness."},
-      { "type": "image", "content": "beebo2" },
-      { "type": "text", "content": "I wired it to an ESP32 microcontroller, installed WLED, then wrote Node-RED functions to send MQTT payloads to my ESP32 over WiFi. The WLED software on my ESP32 receives this information and uses it to alter brightness and color. Its main function at the moment is to automatically turn purple for five seconds when I receive new mail. Below is a gif where I email to myself to showcase this."},
-      { "type": "image", "content": "beebogif" },
-      { "type": "text", "content": "I also tried hooking it up to a Discord bot inside of my server and had it turn on whenever a new message was sent. This got old pretty quickly so that functionality's disabled now. The cool thing about Node-RED though is there's an ever-expanding library of user-made triggers and events I can use to control the light, ranging from Google calendar reminders to signals received from other microcontrollers. In the future if I make more smart devices to monitor my lights, washing machine and other stuff, I'm sure Beebo will be happy then to help me respond as quickly as possible too."}
-    ],
-    "tech": ["Node-RED", "MQTT", "WLED"]
   },
   {
     "title": "In The Shadows",
