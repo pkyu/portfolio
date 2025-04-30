@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.9a205f92.css",
-    "main.js": "/static/js/main.e42526a6.js",
+    "main.js": "/static/js/main.e33c3cac.js",
     "static/js/453.883ffb9b.chunk.js": "/static/js/453.883ffb9b.chunk.js",
+    "static/media/beebogif.gif": "/static/media/beebogif.a362ec05c195571894c4.gif",
     "static/media/stewartgif2.gif": "/static/media/stewartgif2.aec3b1094a14ab6f9583.gif",
     "static/media/sitewallpaper.png": "/static/media/sitewallpaper.59a3bd84e696383206b6.png",
     "static/media/tpt2.png": "/static/media/tpt2.55f0fc2130a329977faa.png",
@@ -12,10 +13,12 @@
     "static/media/pantrypaldevice.png": "/static/media/pantrypaldevice.9fac64de0592d6625fb1.png",
     "static/media/writing.jpg": "/static/media/writing.082cfd52df5a629344c8.jpg",
     "static/media/eyemechtracking.png": "/static/media/eyemechtracking.ae524713381c6244faa5.png",
+    "static/media/beebo2.png": "/static/media/beebo2.1f62e68bd03e3bdf758e.png",
     "static/media/projects.png": "/static/media/projects.df3b9533284a42047edb.png",
     "static/media/intheshadowsgameplay.gif": "/static/media/intheshadowsgameplay.3cb4fa3c27f852e9b3dc.gif",
     "static/media/intheshadowslevel.png": "/static/media/intheshadowslevel.9e5bc260e8b0dac44fe3.png",
     "static/media/stewartgif.gif": "/static/media/stewartgif.3b325ab23b185f4cde2c.gif",
+    "static/media/beebo1.png": "/static/media/beebo1.f38805c832ef696e5e3d.png",
     "static/media/experience.png": "/static/media/experience.0350d3727bf560408ecf.png",
     "static/media/intheshadowcontrols.png": "/static/media/intheshadowcontrols.ae465ec3aa7d9b5c861b.png",
     "static/media/meirl.png": "/static/media/meirl.d2e2d4033fdbd0994cd4.png",
@@ -24,6 +27,7 @@
     "static/media/primeicons.svg": "/static/media/primeicons.6ed59f962963a4a73af2.svg",
     "static/media/stewart.png": "/static/media/stewart.a3add4b59e5b48d10902.png",
     "static/media/about.png": "/static/media/about.4dde5c6cdac0b7f41250.png",
+    "static/media/beebo.png": "/static/media/beebo.53ecd14e4f6ca6b205b8.png",
     "static/media/coastlestats.png": "/static/media/coastlestats.bf1b86a795d74e456f81.png",
     "static/media/coastle.png": "/static/media/coastle.bafadc99555972dfbb9b.png",
     "static/media/pantrypalpage.png": "/static/media/pantrypalpage.8c3aea74e950247bf750.png",
@@ -42,11 +46,11 @@
     "static/media/arrow-right.png": "/static/media/arrow-right.b967fa3420cd46c34193.png",
     "index.html": "/index.html",
     "main.9a205f92.css.map": "/static/css/main.9a205f92.css.map",
-    "main.e42526a6.js.map": "/static/js/main.e42526a6.js.map",
+    "main.e33c3cac.js.map": "/static/js/main.e33c3cac.js.map",
     "453.883ffb9b.chunk.js.map": "/static/js/453.883ffb9b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9a205f92.css",
-    "static/js/main.e42526a6.js"
+    "static/js/main.e33c3cac.js"
   ]
 }
