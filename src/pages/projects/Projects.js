@@ -25,6 +25,10 @@ import intheshadowsgameplay from '../../assets/intheshadowsgameplay.gif'
 import stewart from '../../assets/stewart.png';
 import stewartgif from '../../assets/stewartgif.gif';
 import stewartgif2 from '../../assets/stewartgif2.gif';
+import beebo from '../../assets/beebo.png';
+import beebo1 from '../../assets/beebo1.png';
+import beebo2 from '../../assets/beebo2.png';
+import beebogif from '../../assets/beebogif.gif';
 import l3logo from '../../assets/l3logo.jpg';
 import './Projects.scss';
 
@@ -49,6 +53,10 @@ const imageMap = {
   stewart: stewart,
   stewartgif: stewartgif,
   stewartgif2: stewartgif2,
+  beebo: beebo,
+  beebo1: beebo1,
+  beebo2: beebo2,
+  beebogif: beebogif,
   l3logo: l3logo,
 };
 

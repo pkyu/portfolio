@@ -61,19 +61,19 @@
     "tech": ["Unity", "C#"]
   },
   {
-    "title": "MeeTBD",
-    "description": "A web app combining When2Meet UI with Google Auth and Calendar APIs to act as an event planner for established groups.",
-    "image": "meetbd",
+    "title": "Beebo",
+    "description": "Desk light built using Node-RED and MQTT that lights up different colors when I receive messages on various platforms.",
+    "image": "beebo",
     "details": [
-      { "type": "text", "content": "MeeTBD was a group project born from the pretty simple idea of wanting to make a more beefed up version of When2Meet. As opposed to generating new links and open-ended When2Meet's for each event, we wanted to make a site that supports persistent groups holding multiple events." },
-      { "type": "text", "content": "The first step for this was Google Auth and Calendar integration. Users would log into MeeTBD using their Google account. They could then create their own groups, or join other groups using generated codes. Once in a group, they would have access to its events and be able to provide their availability for ones that had yet to be scheduled. All information for groups, events, and users was stored in a Supabase database." },
-      { "type": "image", "content": "meetbdgroup" },
-      { "type": "text", "content": "Users could fill out their availability from scratch using the click-and-drag grid mechanic from When2Meet, or automatically fill it out using their Google calendar then refine it from there. When ready, Group/Event admins could drag over potential time slots to see how many people would be available during that time, then schedule their event and send emails to participating members, prompting them to add it to their Google Calendars." },
-      { "type": "image", "content": "meetbdschedule" },
-      { "type": "text", "content": "On the home page, users would have a list of all the groups they're in, a list of upcoming events, and a list of events they hadn't provided their availability for yet. This way, users could easily understand everything being planned on our site that they were a part of." },
-      { "type": "text", "content": "My role in this project was handling Google Auth/Calendar integration, creating the group pages and their routing, setting up Supabase and its User Auth/RLS, creating events, and group availability logic." }
+      { "type": "text", "content": "Beebo is a desk lamp that I can control using Node-RED to light up different colors for various events. I first bought a $8 desk lamp off of Amazon and gutted it." },
+      { "type": "image", "content": "beebo1" },
+      { "type": "text", "content": "I wanted to use WLED to control the lights since I had extra ESP32s already, so I bought a 7 x WS2812B LED ring that was compatible with the firmware and could fit inside my shell while still having an extremely high maximum brightness."},
+      { "type": "image", "content": "beebo2" },
+      { "type": "text", "content": "I wired it to an ESP32 microcontroller, installed WLED, then wrote Node-RED functions to send MQTT payloads to my ESP32 over WiFi. The WLED software on my ESP32 receives this information and uses it to alter brightness and color. Its main function at the moment is to automatically turn purple for five seconds when I receive new mail. Below is a gif where I email to myself to showcase this."},
+      { "type": "image", "content": "beebogif" },
+      { "type": "text", "content": "I also tried hooking it up to a Discord bot inside of my server and had it turn on whenever a new message was sent. This got old pretty quickly so that functionality's disabled now. The cool thing about Node-RED though is there's an ever-expanding library of user-made triggers and events I can use to control the light, ranging from Google calendar reminders to signals received from other microcontrollers. In the future if I make more smart devices to monitor my lights, washing machine and other stuff, I'm sure Beebo will be happy then to help me respond as quickly as possible too."}
     ],
-    "tech": ["React", "Javascript", "Google API"]
+    "tech": ["Node-RED", "MQTT", "WLED"]
   },
   {
     "title": "In The Shadows",
@@ -89,5 +89,20 @@
       { "type": "image", "content": "intheshadowsgameplay" }
     ],
     "tech": ["Python"]
+  },
+  {
+    "title": "MeeTBD",
+    "description": "A web app combining When2Meet UI with Google Auth and Calendar APIs to act as an event planner for established groups.",
+    "image": "meetbd",
+    "details": [
+      { "type": "text", "content": "MeeTBD was a group project born from the pretty simple idea of wanting to make a more beefed up version of When2Meet. As opposed to generating new links and open-ended When2Meet's for each event, we wanted to make a site that supports persistent groups holding multiple events." },
+      { "type": "text", "content": "The first step for this was Google Auth and Calendar integration. Users would log into MeeTBD using their Google account. They could then create their own groups, or join other groups using generated codes. Once in a group, they would have access to its events and be able to provide their availability for ones that had yet to be scheduled. All information for groups, events, and users was stored in a Supabase database." },
+      { "type": "image", "content": "meetbdgroup" },
+      { "type": "text", "content": "Users could fill out their availability from scratch using the click-and-drag grid mechanic from When2Meet, or automatically fill it out using their Google calendar then refine it from there. When ready, Group/Event admins could drag over potential time slots to see how many people would be available during that time, then schedule their event and send emails to participating members, prompting them to add it to their Google Calendars." },
+      { "type": "image", "content": "meetbdschedule" },
+      { "type": "text", "content": "On the home page, users would have a list of all the groups they're in, a list of upcoming events, and a list of events they hadn't provided their availability for yet. This way, users could easily understand everything being planned on our site that they were a part of." },
+      { "type": "text", "content": "My role in this project was handling Google Auth/Calendar integration, creating the group pages and their routing, setting up Supabase and its User Auth/RLS, creating events, and group availability logic." }
+    ],
+    "tech": ["React", "Javascript", "Google API"]
   }
 ]
