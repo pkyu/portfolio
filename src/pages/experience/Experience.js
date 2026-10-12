@@ -2,6 +2,7 @@ import React from 'react';
 import './Experience.scss';
 import { Chip } from 'primereact/chip';
 import { Divider } from 'primereact/divider';
+import smartmonkeyslogo from '../../assets/smartmonkeyslogo.png';
 import udxlogo from '../../assets/udxlogo.jpg';
 import l3logo from '../../assets/l3logo.jpg';
 import experience from '../../assets/experience.png';
@@ -14,7 +15,38 @@ const Experience = () => {
       </div>
       <div className="experience-tiles">
         <div className="experience-tile">
-          <img src={udxlogo} alt="Universal Destinations and Experiences logo" className="experience-image" />
+          <img src={smartmonkeyslogo} alt="Smart Monkeys logo" className="experience-image" />
+          <div className="experience-info">
+            <h2 className="experience-role">Project Engineer</h2>
+            <h2 className="experience-company">Smart Monkeys</h2>
+            <h3 className="experience-time">Jun 2025 - Current</h3>
+            <div className="chips-container">
+              <Chip label="QSYS" className="language-chip" />
+              <Chip label="Disguise" className="language-chip" />
+              <Chip label="Pixera" className="language-chip" />
+              <Chip label="Networking" className="language-chip" />
+              <Chip label="NodeRED" className="language-chip" />
+              <Chip label="Virtualization" className="language-chip" />
+            </div>
+            <div className="experience-details">
+              <Divider />
+              <h1>Show Control Design and Development</h1>
+              <ul>
+                <li>
+                  Research and create custom control software for a large variety of equipment spanning audio, video, lighting, and more based on individual project needs.
+                </li>
+                <li>
+                  Design complex systems for communicating and timing control commands to be sent out to large amounts of devices, then build them from the ground up.
+                </li>
+                <li>
+                  Create user interfaces and batched functionality for end clients to operate/monitor show systems on different levels of complexity from technicians to general public, both manually and on schedules.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="experience-tile">
+          <img src={udxlogo}alt="Universal Destinations and Experiences logo" className="experience-image" />
           <div className="experience-info">
             <h2 className="experience-role">Web Solutions Operations & Engineering Intern</h2>
             <h2 className="experience-company">Universal Destinations and Experiences</h2>
@@ -67,9 +99,9 @@ const Experience = () => {
         <div className="experience-tile">
           <img src={l3logo} alt="L3Harris logo" className="experience-image" />
           <div className="experience-info">
-            <h2 className="experience-role">Associate Software Engineer</h2>
+            <h2 className="experience-role">Associate Software Engineer (Uncleared Work)</h2>
             <h2 className="experience-company">L3Harris Technologies</h2>
-            <h3 className="experience-time">Jun 2024 - Current</h3>
+            <h3 className="experience-time">Jun 2024 - May 2025</h3>
             <div className="chips-container">
               <Chip label="Typescript" className="language-chip" />
               <Chip label="Python" className="language-chip" />

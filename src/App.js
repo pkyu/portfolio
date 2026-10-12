@@ -13,7 +13,7 @@ import 'primeicons/primeicons.css';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <div className="App">
         <Navbar />
         <main>
